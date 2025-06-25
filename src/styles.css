@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-cream-50 to-coffee-100 min-h-screen font-cozy;
+    background-image: 
+      radial-gradient(circle at 25px 25px, rgba(139, 69, 19, 0.1) 2px, transparent 0),
+      radial-gradient(circle at 75px 75px, rgba(160, 82, 45, 0.1) 2px, transparent 0);
+    background-size: 100px 100px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .coffee-cup {
+    position: relative;
+  }
+  
+  .coffee-cup::before {
+    content: '☕';
+    font-size: 2rem;
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .steam {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to top, rgba(255,255,255,0.8), transparent);
+    animation: steam 2s ease-in-out infinite;
+  }
+  
+  .steam:nth-child(1) { left: 10px; animation-delay: 0s; }
+  .steam:nth-child(2) { left: 15px; animation-delay: 0.5s; }
+  .steam:nth-child(3) { left: 20px; animation-delay: 1s; }
+}
