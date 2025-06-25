@@ -1,59 +1,111 @@
-# CoffeePortfolio
+# ☕ Guilherme Portfolio - Portfólio Desenvolvedor Frontend 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+![Angular](https://img.shields.io/badge/Angular-20.0-red?style=for-the-badge&logo=angular)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-blue?style=for-the-badge&logo=tailwindcss)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5.0-purple?style=for-the-badge&logo=vite)
 
-## Development server
+## 🎯 Sobre o Projeto
 
-To start a local development server, run:
+Este é um portfólio pessoal com tema de café (gosto muito), desenvolvido em Angular com TailwindCSS. O projeto representa a transição de um Auxiliar de Usinagem para Desenvolvedor Frontend, com design aconchegante e animações cartoonizadas inspiradas no universo do café.
 
-```bash
-ng serve
+## ✨ Características
+
+- 🎨 **Design Responsivo**: Interface adaptável para todos os dispositivos
+- ☕ **Tema Coffee**: Paleta de cores e elementos visuais inspirados no café
+- 🌟 **Animações Suaves**: Elementos flutuantes e transições elegantes
+- 📱 **PWA Ready**: Configurado para Progressive Web App
+- 🚀 **Performance**: Otimizado com SSR e build de produção
+- 🎭 **Cartoonizado**: Visual amigável e divertido
+
+## 🛠️ Tecnologias Utilizadas
+
+### Frontend
+- **Angular 20** (Zoneless + SSR)
+- **TypeScript**
+- **TailwindCSS** (com configuração customizada)
+- **PostCSS**
+
+### Ferramentas de Desenvolvimento
+- **Vite** (build tool)
+- **Git** (controle de versão)
+- **VS Code** (editor)
+
+## 📁 Estrutura do Projeto
+
+```
+coffee-portfolio/
+├── src/
+│   ├── app/
+│   │   ├── app.html          # Template principal com tema coffee
+│   │   ├── app.ts            # Componente raiz
+│   │   └── app.config.ts     # Configurações do Angular
+│   ├── styles.css            # Estilos globais + TailwindCSS
+│   └── index.html            # HTML base
+├── tailwind.config.js        # Configuração personalizada do Tailwind
+├── postcss.config.js         # Configuração do PostCSS
+└── package.json              # Dependências do projeto
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🎨 Design System
 
-## Code scaffolding
+### Paleta de Cores
+- **Coffee**: Tons de marrom inspirados no café
+- **Cream**: Tons creme para contraste suave  
+- **Bean**: Tons de grão de café para detalhes
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Fontes
+- **Kalam**: Para elementos handwriting (títulos)
+- **Nunito**: Para texto geral (cozy)
 
+### Animações
+- **Float**: Elementos flutuantes (☕🫘)
+- **Steam**: Vapor saindo do café
+- **Hover Effects**: Transições suaves nos cards
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+- Node.js 18+
+- npm ou yarn
+
+### Instalação
 ```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
 
-## Building
 
-To build the project run:
+## 📱 Seções do Portfólio
 
-```bash
-ng build
-```
+1. **🏠 Home**: Hero section com apresentação e call-to-actions
+2. **👨‍💻 Sobre**: História pessoal e transição de carreira
+3. **⚡ Skills**: Tecnologias frontend e backend
+4. **☕ Projetos**: Showcase de projetos (placeholders preparados)
+5. **📞 Contato**: Informações de contato e redes sociais
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🎯 Objetivos do Desenvolvedor
 
-## Running unit tests
+- **Atual**: Auxiliar de Usinagem
+- **Meta**: Desenvolvedor Frontend Sênior
+- **Foco**: Angular, TypeScript, TailwindCSS
+- **Combustível**: Café ☕
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📝 Próximos Passos
 
-```bash
-ng test
-```
+- [ ] Adicionar projetos reais
+- [ ] Adicionar dark/light mode
+- [ ] Integrar analytics
+- [ ] Deploy em produção
 
-## Running end-to-end tests
+## 🤝 Contribuições
 
-For end-to-end (e2e) testing, run:
+Este é um projeto pessoal, mas sugestões e feedbacks são sempre bem-vindos!
 
-```bash
-ng e2e
-```
+## 📄 Licença
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+**Desenvolvido com ❤️ e muito ☕ por um futuro Dev Frontend**
+
+> *"Assim como o café precisa do equilíbrio perfeito entre grão, água e temperatura, acredito que o desenvolvimento web precisa do equilíbrio entre criatividade, funcionalidade e experiência do usuário."*
