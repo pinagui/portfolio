@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito:wght@300;400;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +9,7 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-br from-cream-50 to-coffee-100 min-h-screen font-cozy;
+    @apply bg-gradient-to-br from-cream-50 to-coffee-100 min-h-screen;
     background-image: 
       radial-gradient(circle at 25px 25px, rgba(139, 69, 19, 0.1) 2px, transparent 0),
       radial-gradient(circle at 75px 75px, rgba(160, 82, 45, 0.1) 2px, transparent 0);

@@ -1,0 +1,44 @@
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+  <div class="absolute inset-0 bg-gradient-to-br from-cream-100 via-coffee-50 to-cream-200"></div>
+  
+  <!-- Floating coffee beans -->
+  <div class="absolute top-20 left-10 text-4xl animate-float" style="animation-delay: 0s;">⚡</div>
+  <div class="absolute top-40 right-20 text-3xl animate-float" style="animation-delay: 1s;">⚡</div>
+  <!-- <div class="absolute bottom-40 left-20 text-2xl animate-float" style="animation-delay: 2s;">👨‍💻</div> -->
+  <!-- <div class="absolute bottom-20 right-10 text-4xl animate-float" style="animation-delay: 1.5s;">💻</div> -->
+  
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-8">
+        <div class="inline-block relative">
+          <div class="text-8xl mb-4 relative">
+            ☕
+            <div class="steam absolute -top-2 left-1/2 transform -translate-x-1/2"></div>
+            <div class="steam absolute -top-2 left-1/2 transform -translate-x-1/2"></div>
+            <div class="steam absolute -top-2 left-1/2 transform -translate-x-1/2"></div>
+          </div>
+        </div>
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-bold text-coffee-800 mb-6">
+        Olá, eu sou o 
+        <span class="text-coffee-600 block">Guilherme ☕</span>
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-coffee-700 mb-8 max-w-2xl mx-auto">
+        Transformando <span class="font-bold text-coffee-600">café</span> em código e 
+        <span class="font-bold text-coffee-600">ideias</span> em experiências digitais incríveis
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button (click)="scrollToSection('projects')" class="bg-coffee-600 text-white px-8 py-4 rounded-full font-bold hover:bg-coffee-700 transition-all transform hover:scale-105 shadow-lg">
+          Ver Projetos ☕
+        </button>
+        <button (click)="scrollToSection('contact')" class="border-2 border-coffee-600 text-coffee-600 px-8 py-4 rounded-full font-bold hover:bg-coffee-600 hover:text-white transition-all transform hover:scale-105">
+          Vamos Conversar 💬
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -44,8 +44,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        'handwriting': ['Kalam', 'cursive'],
-        'cozy': ['Nunito', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
       animation: {
         'float': 'float 3s ease-in-out infinite',
