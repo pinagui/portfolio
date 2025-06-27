@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{html,ts}",
   ],
+  darkMode: 'class', 
   theme: {
     extend: {
       colors: {
@@ -41,6 +42,18 @@ module.exports = {
           700: '#70433c',
           800: '#5e3934',
           900: '#52312f',
+        },
+        dark: {
+          50: '#1f2937',
+          100: '#374151',
+          200: '#4b5563',
+          300: '#6b7280',
+          400: '#9ca3af',
+          500: '#d1d5db',
+          600: '#e5e7eb',
+          700: '#f3f4f6',
+          800: '#f9fafb',
+          900: '#ffffff',
         }
       },
       fontFamily: {

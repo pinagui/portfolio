@@ -1,5 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -10,11 +10,26 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent implements OnInit {
   isMenuOpen = false;
   isHeaderVisible = true;
+  isDarkMode = false;
   private lastScrollTop = 0;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
     // Header sempre visível no início
     this.isHeaderVisible = true;
+    
+    // Verificar se há preferência salva no localStorage apenas no browser
+    if (isPlatformBrowser(this.platformId)) {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        this.isDarkMode = true;
+        document.documentElement.classList.add('dark');
+      } else {
+        this.isDarkMode = false;
+        document.documentElement.classList.remove('dark');
+      }
+    }
   }
 
   toggleMenu() {
@@ -23,6 +38,20 @@ export class HeaderComponent implements OnInit {
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    
+    if (isPlatformBrowser(this.platformId)) {
+      if (this.isDarkMode) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    }
   }
 
   @HostListener('window:scroll', [])

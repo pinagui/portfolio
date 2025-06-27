@@ -1,5 +1,5 @@
 <header 
-  class="fixed top-0 left-0 right-0 z-50 bg-cream-50/90 backdrop-blur-sm border-b border-coffee-200 transition-transform duration-300"
+  class="fixed top-0 left-0 right-0 z-50 bg-cream-50/90 dark:bg-dark-50/90 backdrop-blur-sm border-b border-coffee-200 dark:border-dark-200 transition-transform duration-300"
   [class.transform]="!isHeaderVisible"
   [class.-translate-y-full]="!isHeaderVisible">
   
@@ -7,50 +7,86 @@
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center space-x-2">
-        <div class="text-3xl animate-float">☕</div>
-        <span class="text-2xl font-bold text-coffee-800">PinaGui</span>
+        <div class="text-3xl"></div>
+        <span class="text-2xl font-bold text-coffee-800 dark:text-dark-700">PinaGui</span>
       </div>
       
       <!-- Desktop Menu -->
-      <div class="hidden md:flex space-x-8">
-        <button (click)="scrollToSection('home')" class="text-coffee-700 hover:text-coffee-500 transition-colors font-medium">
+      <div class="hidden md:flex items-center space-x-6">
+        <button (click)="scrollToSection('home')" class="text-coffee-700 dark:text-dark-600 hover:text-coffee-500 dark:hover:text-dark-700 transition-colors font-medium">
           Home
         </button>
-        <button (click)="scrollToSection('about')" class="text-coffee-700 hover:text-coffee-500 transition-colors font-medium">
+        <button (click)="scrollToSection('about')" class="text-coffee-700 dark:text-dark-600 hover:text-coffee-500 dark:hover:text-dark-700 transition-colors font-medium">
           Sobre
         </button>
-        <button (click)="scrollToSection('skills')" class="text-coffee-700 hover:text-coffee-500 transition-colors font-medium">
+        <button (click)="scrollToSection('education')" class="text-coffee-700 dark:text-dark-600 hover:text-coffee-500 dark:hover:text-dark-700 transition-colors font-medium">
+          Formação
+        </button>
+        <button (click)="scrollToSection('skills')" class="text-coffee-700 dark:text-dark-600 hover:text-coffee-500 dark:hover:text-dark-700 transition-colors font-medium">
           Skills
         </button>
-        <button (click)="scrollToSection('projects')" class="text-coffee-700 hover:text-coffee-500 transition-colors font-medium">
+        <!-- <button (click)="scrollToSection('experience')" class="text-coffee-700 dark:text-dark-600 hover:text-coffee-500 dark:hover:text-dark-700 transition-colors font-medium">
+          Experiência
+        </button> -->
+        <button (click)="scrollToSection('projects')" class="text-coffee-700 dark:text-dark-600 hover:text-coffee-500 dark:hover:text-dark-700 transition-colors font-medium">
           Projetos
         </button>
-        <button (click)="scrollToSection('contact')" class="text-coffee-700 hover:text-coffee-500 transition-colors font-medium">
+        <button (click)="scrollToSection('contact')" class="text-coffee-700 dark:text-dark-600 hover:text-coffee-500 dark:hover:text-dark-700 transition-colors font-medium">
           Contato
+        </button>
+        
+        <!-- Theme Toggle -->
+        <button 
+          (click)="toggleTheme()" 
+          data-theme-toggle
+          class="p-2 rounded-lg text-coffee-700 dark:text-dark-600 hover:bg-coffee-100 dark:hover:bg-dark-100 transition-colors"
+          [title]="isDarkMode ? 'Light Mode' : 'Dark Mode'">
+          <svg *ngIf="!isDarkMode" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <svg *ngIf="isDarkMode" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
         </button>
       </div>
       
       <!-- Mobile Menu Button -->
-      <button 
-        (click)="toggleMenu()" 
-        class="md:hidden text-coffee-700 p-2 rounded-lg hover:bg-coffee-100 transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path 
-            *ngIf="!isMenuOpen"
-            stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M4 6h16M4 12h16M4 18h16">
-          </path>
-          <path 
-            *ngIf="isMenuOpen"
-            stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M6 18L18 6M6 6l12 12">
-          </path>
-        </svg>
-      </button>
+      <div class="md:hidden flex items-center space-x-3">
+        <!-- Mobile Theme Toggle -->
+        <button 
+          (click)="toggleTheme()" 
+          data-theme-toggle
+          class="p-2 rounded-lg text-coffee-700 dark:text-dark-600 hover:bg-coffee-100 dark:hover:bg-dark-100 transition-colors"
+          [title]="isDarkMode ? 'Light Mode' : 'Dark Mode'">
+          <svg *ngIf="!isDarkMode" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <svg *ngIf="isDarkMode" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+        
+        <button 
+          (click)="toggleMenu()" 
+          class="text-coffee-700 dark:text-dark-600 p-2 rounded-lg hover:bg-coffee-100 dark:hover:bg-dark-100 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path 
+              *ngIf="!isMenuOpen"
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16">
+            </path>
+            <path 
+              *ngIf="isMenuOpen"
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M6 18L18 6M6 6l12 12">
+            </path>
+          </svg>
+        </button>
+      </div>
     </div>
     
     <!-- Mobile Menu -->
@@ -61,30 +97,40 @@
       [class.opacity-0]="!isMenuOpen"
       [class.opacity-100]="isMenuOpen">
       
-      <div class="py-4 space-y-2 border-t border-coffee-200 mt-4">
+      <div class="py-4 space-y-2 border-t border-coffee-200 dark:border-dark-200 mt-4">
         <button 
           (click)="scrollToSection('home')" 
-          class="block w-full text-left px-4 py-3 text-coffee-700 hover:bg-coffee-100 rounded-lg transition-colors font-medium">
+          class="block w-full text-left px-4 py-3 text-coffee-700 dark:text-dark-600 hover:bg-coffee-100 dark:hover:bg-dark-100 rounded-lg transition-colors font-medium">
           🏠 Home
         </button>
         <button 
           (click)="scrollToSection('about')" 
-          class="block w-full text-left px-4 py-3 text-coffee-700 hover:bg-coffee-100 rounded-lg transition-colors font-medium">
+          class="block w-full text-left px-4 py-3 text-coffee-700 dark:text-dark-600 hover:bg-coffee-100 dark:hover:bg-dark-100 rounded-lg transition-colors font-medium">
           👨‍💻 Sobre
         </button>
         <button 
-          (click)="scrollToSection('skills')" 
-          class="block w-full text-left px-4 py-3 text-coffee-700 hover:bg-coffee-100 rounded-lg transition-colors font-medium">
-          ⚡ Skills
+          (click)="scrollToSection('education')" 
+          class="block w-full text-left px-4 py-3 text-coffee-700 dark:text-dark-600 hover:bg-coffee-100 dark:hover:bg-dark-100 rounded-lg transition-colors font-medium">
+          🎓 Formação
         </button>
         <button 
+          (click)="scrollToSection('skills')" 
+          class="block w-full text-left px-4 py-3 text-coffee-700 dark:text-dark-600 hover:bg-coffee-100 dark:hover:bg-dark-100 rounded-lg transition-colors font-medium">
+          ⚡ Skills
+        </button>
+        <!-- <button 
+          (click)="scrollToSection('experience')" 
+          class="block w-full text-left px-4 py-3 text-coffee-700 dark:text-dark-600 hover:bg-coffee-100 dark:hover:bg-dark-100 rounded-lg transition-colors font-medium">
+          💼 Experiência
+        </button> -->
+        <button 
           (click)="scrollToSection('projects')" 
-          class="block w-full text-left px-4 py-3 text-coffee-700 hover:bg-coffee-100 rounded-lg transition-colors font-medium">
+          class="block w-full text-left px-4 py-3 text-coffee-700 dark:text-dark-600 hover:bg-coffee-100 dark:hover:bg-dark-100 rounded-lg transition-colors font-medium">
           ☕ Projetos
         </button>
         <button 
           (click)="scrollToSection('contact')" 
-          class="block w-full text-left px-4 py-3 text-coffee-700 hover:bg-coffee-100 rounded-lg transition-colors font-medium">
+          class="block w-full text-left px-4 py-3 text-coffee-700 dark:text-dark-600 hover:bg-coffee-100 dark:hover:bg-dark-100 rounded-lg transition-colors font-medium">
           📞 Contato
         </button>
       </div>

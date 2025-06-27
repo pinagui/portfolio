@@ -1,4 +1,100 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '@fontsource/montserrat/400.css';
+@import '@fontsource/montserrat/500.css';
+@import '@fontsource/montserrat/600.css';
+@import '@fontsource/montserrat/700.css';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1), color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth theme transitions for all elements */
+*, *::before, *::after {
+  transition: 
+    background-color 1s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 1s cubic-bezier(0.4, 0, 0.2, 1),
+    color 1s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Override specific transition for interactive elements */
+button, a, input, textarea, select {
+  transition: 
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Special transition for theme toggle button */
+[data-theme-toggle] {
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+[data-theme-toggle]:hover {
+  transform: scale(1.1);
+}
+
+/* Enhanced steam animation */
+.steam {
+  width: 4px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  animation: steam 2s ease-in-out infinite;
+}
+
+.steam:nth-child(1) {
+  animation-delay: 0s;
+  left: calc(50% - 8px);
+}
+
+.steam:nth-child(2) {
+  animation-delay: 0.5s;
+  left: 50%;
+}
+
+.steam:nth-child(3) {
+  animation-delay: 1s;
+  left: calc(50% + 8px);
+}
+
+@keyframes steam {
+  0% {
+    opacity: 0.8;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(-10px) scale(1.1) rotate(2deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(1.2) rotate(-2deg);
+  }
+}
+
+/* Global Styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,11 +103,17 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-br from-cream-50 to-coffee-100 min-h-screen;
+    @apply bg-gradient-to-br from-cream-50 to-coffee-100 dark:from-dark-50 dark:to-dark-100 min-h-screen transition-colors duration-300;
     background-image: 
       radial-gradient(circle at 25px 25px, rgba(139, 69, 19, 0.1) 2px, transparent 0),
       radial-gradient(circle at 75px 75px, rgba(160, 82, 45, 0.1) 2px, transparent 0);
     background-size: 100px 100px;
+  }
+
+  .dark body {
+    background-image: 
+      radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.05) 2px, transparent 0),
+      radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.03) 2px, transparent 0);
   }
   
   html {
@@ -42,4 +144,9 @@
   .steam:nth-child(1) { left: 10px; animation-delay: 0s; }
   .steam:nth-child(2) { left: 15px; animation-delay: 0.5s; }
   .steam:nth-child(3) { left: 20px; animation-delay: 1s; }
+
+  /* Dark mode steam effects */
+  .dark .steam {
+    background: linear-gradient(to top, rgba(255,255,255,0.3), transparent);
+  }
 }
