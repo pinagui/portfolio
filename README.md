@@ -1,19 +1,15 @@
 # ☕ Guilherme Portfolio - Portfólio Desenvolvedor Frontend 
 
-![Angular](https://img.shields.io/badge/Angular-20.0-red?style=for-the-badge&logo=angular)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-blue?style=for-the-badge&logo=tailwindcss)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
-![Vite](https://img.shields.io/badge/Vite-5.0-purple?style=for-the-badge&logo=vite)
-
 ## 🎯 Sobre o Projeto
 
-Este é um portfólio pessoal com tema de café (gosto muito), desenvolvido em Angular com TailwindCSS. O projeto representa a transição de um Auxiliar de Usinagem para Desenvolvedor Frontend, com design aconchegante e animações cartoonizadas inspiradas no universo do café.
+Este é um portfólio pessoal com tema de café (gosto muito), desenvolvido em Angular com TailwindCSS. O projeto representa a transição de um Auxiliar de Usinagem para Desenvolvedor Frontend.
 
 ## ✨ Características
 
 - 🎨 **Design Responsivo**: Interface adaptável para todos os dispositivos
 - ☕ **Tema Coffee**: Paleta de cores e elementos visuais inspirados no café
 - 🌟 **Animações Suaves**: Elementos flutuantes e transições elegantes
+- ♿ **Acessibilidade**: Otimizado para leitores de tela em português
 - 📱 **PWA Ready**: Configurado para Progressive Web App
 - 🚀 **Performance**: Otimizado com SSR e build de produção
 - 🎭 **Cartoonizado**: Visual amigável e divertido
@@ -69,26 +65,37 @@ coffee-portfolio/
 - Node.js 18+
 - npm ou yarn
 
-### Instalação
-```bash
-
-
-
 
 ## 📱 Seções do Portfólio
 
 1. **🏠 Home**: Hero section com apresentação e call-to-actions
 2. **👨‍💻 Sobre**: História pessoal e transição de carreira
 3. **⚡ Skills**: Tecnologias frontend e backend
-4. **☕ Projetos**: Showcase de projetos (placeholders preparados)
+4. **☕ Projetos**: Showcase de projetos 
 5. **📞 Contato**: Informações de contato e redes sociais
 
 ## 🎯 Objetivos do Desenvolvedor
 
 - **Atual**: Auxiliar de Usinagem
-- **Meta**: Desenvolvedor Frontend Sênior
+- **Meta**: Desenvolvedor Frontend
 - **Foco**: Angular, TypeScript, TailwindCSS
 - **Combustível**: Café ☕
+
+## ♿ Acessibilidade
+
+O portfolio foi desenvolvido seguindo boas práticas de acessibilidade:
+
+- **Rótulos Descritivos**: Todos os botões possuem `aria-label` em português para leitores de tela
+- **Estados Dinâmicos**: `aria-expanded` nos botões de menu para indicar estado aberto/fechado
+- **Ícones Semânticos**: SVGs com `aria-hidden="true"` para evitar poluição sonora
+- **Navegação Clara**: Labels específicos como "Abrir menu de navegação" e "Ativar modo escuro"
+- **Suporte a Screen Readers**: Interface otimizada para usuários com deficiência visual
+
+### Testes de Acessibilidade Realizados
+- ✅ Validação de aria-labels em botões de navegação
+- ✅ Correção de botões sem nome acessível
+- ✅ Implementação de estados aria-expanded
+- ✅ Otimização para leitores de tela em português
 
 ## 📝 Próximos Passos
 
