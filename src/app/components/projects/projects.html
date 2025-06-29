@@ -4,7 +4,7 @@
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-coffee-800 dark:text-dark-700 mb-4">
-          Meus Projetos ☕
+          Meus Projetos
         </h2>
         <div class="w-24 h-1 bg-coffee-500 dark:bg-dark-600 mx-auto mb-6"></div>
         <p class="text-xl text-coffee-700 dark:text-dark-600 max-w-2xl mx-auto">
@@ -12,77 +12,303 @@
         </p>
       </div>
       
-      <div class="grid md:grid-cols-3 gap-8 mb-12">
-        <!-- Project 1 -->
-        <div class="bg-white/80 dark:bg-dark-100/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-coffee-200 dark:border-dark-200 hover:shadow-2xl transition-all transform hover:scale-105">
-          <div class="aspect-video bg-gradient-to-br from-coffee-200 to-cream-300 dark:from-dark-200 dark:to-dark-300 rounded-2xl mb-4 flex items-center justify-center text-4xl">
-            🌐
+      <!-- Pitch Detector Project -->
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white/80 dark:bg-dark-100/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-coffee-200 dark:border-dark-200 hover:shadow-2xl transition-all transform hover:scale-105">
+          <!-- Project Image -->
+          <div class="aspect-video rounded-2xl mb-6 relative overflow-hidden shadow-lg">
+            <img 
+              src="sing-pitch-project.webp" 
+              alt="Screenshot do Pitch Detector App - Interface do afinador musical"
+              class="w-full h-full object-cover"
+              loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <div class="text-2xl font-bold">🎵 Pitch Detector</div>
+              <div class="text-lg opacity-90">Afinador Musical em Tempo Real</div>
+            </div>
+            <div class="absolute top-4 right-4 bg-coffee-600/90 rounded-full px-3 py-1 text-white text-sm font-medium">
+              Full Stack
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-coffee-800 dark:text-dark-700 mb-2">Portfolio Website</h3>
-          <p class="text-coffee-600 dark:text-dark-600 mb-4 text-sm">Um portfólio moderno e responsivo criado com as melhores tecnologias</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-coffee-200 dark:bg-dark-200 text-coffee-800 dark:text-dark-700 rounded-full text-sm">Angular</span>
-            <span class="px-3 py-1 bg-coffee-200 dark:bg-dark-200 text-coffee-800 dark:text-dark-700 rounded-full text-sm">Node.js</span>
+          
+          <!-- Project Title -->
+          <h3 class="text-3xl font-bold text-coffee-800 dark:text-dark-700 mb-4 text-center">
+            🎤 Detector de Pitch - Afinador Musical
+          </h3>
+          
+          <!-- Brief Description -->
+          <p class="text-coffee-600 dark:text-dark-600 mb-6 text-center text-lg leading-relaxed">
+            Aplicativo web em tempo real para treinar afinação vocal.
+            Meu primeiro projeto full stack completo com processamento de áudio e interface moderna.
+          </p>
+          
+          <!-- Technologies Used -->
+          <div class="mb-6">
+            <h4 class="text-lg font-bold text-coffee-800 dark:text-dark-700 mb-3 text-center">🛠️ Tecnologias Utilizadas</h4>
+            
+            <!-- Backend Technologies -->
+            <div class="mb-4">
+              <h5 class="font-semibold text-coffee-700 dark:text-dark-600 mb-2">Backend (Python):</h5>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">FastAPI</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">WebSockets</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">NumPy</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">SoundDevice</span>
+              </div>
+            </div>
+            
+            <!-- Frontend Technologies -->
+            <div>
+              <h5 class="font-semibold text-coffee-700 dark:text-dark-600 mb-2">Frontend (React):</h5>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm">React 18 + TypeScript</span>
+                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm">Vite</span>
+                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm">TailwindCSS</span>
+                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm">Recharts</span>
+                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm">WebSocket Client</span>
+              </div>
+            </div>
           </div>
-          <div class="flex gap-3">
-            <a href="#" class="flex-1 bg-cream-50 dark:bg-dark-100 text-coffee-800 dark:text-cream-50 border-2 border-coffee-600 dark:border-cream-50 text-center py-2 rounded-full hover:bg-coffee-600 dark:hover:bg-cream-50 hover:text-cream-50 dark:hover:text-dark-100 transition-all font-medium">
-              Demo
-            </a>
-            <a href="#" class="flex-1 bg-cream-50 dark:bg-dark-100 text-coffee-800 dark:text-cream-50 border-2 border-coffee-600 dark:border-cream-50 text-center py-2 rounded-full hover:bg-coffee-600 dark:hover:bg-cream-50 hover:text-cream-50 dark:hover:text-dark-100 transition-all font-medium">
-              Código
-            </a>
+          
+          <!-- Action Button -->
+          <div class="text-center">
+            <button 
+              (click)="openProjectModal()"
+              class="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold hover:from-indigo-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg text-lg">
+              <div class="text-xl">🚀</div>
+              Ver Projeto Completo
+            </button>
           </div>
         </div>
-        
-        <!-- Project 2 -->
-        <div class="bg-white/80 dark:bg-dark-100/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-coffee-200 dark:border-dark-200 hover:shadow-2xl transition-all transform hover:scale-105">
-          <div class="aspect-video bg-gradient-to-br from-coffee-200 to-cream-300 dark:from-dark-200 dark:to-dark-300 rounded-2xl mb-4 flex items-center justify-center text-4xl">
-            🛒
-          </div>
-          <h3 class="text-xl font-bold text-coffee-800 dark:text-dark-700 mb-2">E-commerce App</h3>
-          <p class="text-coffee-600 dark:text-dark-600 mb-4 text-sm">Loja virtual completa com carrinho de compras e sistema de pagamento</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-coffee-200 dark:bg-dark-200 text-coffee-800 dark:text-dark-700 rounded-full text-sm">Angular</span>
-            <span class="px-3 py-1 bg-coffee-200 dark:bg-dark-200 text-coffee-800 dark:text-dark-700 rounded-full text-sm">TailwindCSS</span>
-          </div>
-          <div class="flex gap-3">
-            <a href="#" class="flex-1 bg-cream-50 dark:bg-dark-100 text-coffee-800 dark:text-cream-50 border-2 border-coffee-600 dark:border-cream-50 text-center py-2 rounded-full hover:bg-coffee-600 dark:hover:bg-cream-50 hover:text-cream-50 dark:hover:text-dark-100 transition-all font-medium">
-              Demo
-            </a>
-            <a href="#" class="flex-1 bg-cream-50 dark:bg-dark-100 text-coffee-800 dark:text-cream-50 border-2 border-coffee-600 dark:border-cream-50 text-center py-2 rounded-full hover:bg-coffee-600 dark:hover:bg-cream-50 hover:text-cream-50 dark:hover:text-dark-100 transition-all font-medium">
-              Código
-            </a>
-          </div>
-        </div>
-        
-        <!-- Project 3 -->
-        <div class="bg-white/80 dark:bg-dark-100/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-coffee-200 dark:border-dark-200 hover:shadow-2xl transition-all transform hover:scale-105">
-          <div class="aspect-video bg-gradient-to-br from-coffee-200 to-cream-300 dark:from-dark-200 dark:to-dark-300 rounded-2xl mb-4 flex items-center justify-center text-4xl">
-            📊
-          </div>
-          <h3 class="text-xl font-bold text-coffee-800 dark:text-dark-700 mb-2">Dashboard Analytics</h3>
-          <p class="text-coffee-600 dark:text-dark-600 mb-4 text-sm">Painel administrativo com gráficos interativos e relatórios em tempo real</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-coffee-200 dark:bg-dark-200 text-coffee-800 dark:text-dark-700 rounded-full text-sm">Angular</span>
-            <span class="px-3 py-1 bg-coffee-200 dark:bg-dark-200 text-coffee-800 dark:text-dark-700 rounded-full text-sm">Charts.js</span>
-          </div>
-          <div class="flex gap-3">
-            <a href="#" class="flex-1 bg-cream-50 dark:bg-dark-100 text-coffee-800 dark:text-cream-50 border-2 border-coffee-600 dark:border-cream-50 text-center py-2 rounded-full hover:bg-coffee-600 dark:hover:bg-cream-50 hover:text-cream-50 dark:hover:text-dark-100 transition-all font-medium">
-              Demo
-            </a>
-            <a href="#" class="flex-1 bg-cream-50 dark:bg-dark-100 text-coffee-800 dark:text-cream-50 border-2 border-coffee-600 dark:border-cream-50 text-center py-2 rounded-full hover:bg-coffee-600 dark:hover:bg-cream-50 hover:text-cream-50 dark:hover:text-dark-100 transition-all font-medium">
-              Código
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="text-center">
-        <a href="#" class="inline-flex items-center gap-2 bg-cream-50 dark:bg-dark-100 text-coffee-800 dark:text-cream-50 border-2 border-coffee-600 dark:border-cream-50 px-8 py-4 rounded-full font-bold hover:bg-coffee-600 dark:hover:bg-cream-50 hover:text-cream-50 dark:hover:text-dark-100 transition-all transform hover:scale-105 shadow-lg">
-          <div class="text-xl">👀</div>
-          Ver Todos os Projetos
-        </a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Project Modal -->
+<div 
+  *ngIf="showProjectModal"
+  class="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-sm"
+  (click)="closeProjectModal()">
+  
+  <div 
+    class="bg-cream-50 dark:bg-dark-50 rounded-2xl sm:rounded-3xl shadow-2xl max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto border border-coffee-200 dark:border-dark-200"
+    (click)="$event.stopPropagation()">
+    
+    <!-- Modal Header -->
+    <div class="sticky top-0 bg-cream-50 dark:bg-dark-50 border-b border-coffee-200 dark:border-dark-200 p-4 sm:p-6 rounded-t-2xl sm:rounded-t-3xl">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-coffee-800 dark:text-dark-700 pr-4">
+          🎵 Detector de Pitch - Afinador Musical
+        </h2>
+        <button 
+          (click)="closeProjectModal()"
+          class="p-2 rounded-full hover:bg-coffee-100 dark:hover:bg-dark-100 transition-colors flex-shrink-0"
+          [attr.aria-label]="'Fechar modal'">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-coffee-600 dark:text-dark-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Modal Content -->
+    <div class="p-4 sm:p-6">
+      <!-- Project Image/Preview -->
+      <div class="aspect-video rounded-xl sm:rounded-2xl mb-4 sm:mb-6 relative overflow-hidden shadow-lg">
+        <img 
+          src="sing-pitch-project.webp" 
+          alt="Screenshot do Pitch Detector App - Interface completa do afinador musical"
+          class="w-full h-full object-cover"
+          loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-4 text-white">
+          <div class="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">🎵 Pitch Detector App</div>
+          <div class="text-sm sm:text-lg md:text-xl opacity-90">Afinador Musical em Tempo Real</div>
+          <div class="text-xs sm:text-sm md:text-base opacity-75 mt-1 sm:mt-2 hidden sm:block">Detecção de frequência • Análise de pitch • Interface moderna</div>
+        </div>
+        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 bg-coffee-600/90 rounded-full px-3 py-1 sm:px-4 sm:py-2 text-white font-medium text-xs sm:text-sm">
+          🚀 Projeto ao Vivo
+        </div>
+      </div>
+      
+      <!-- Project Description -->
+      <div class="space-y-4 sm:space-y-6">
+        <div>
+          <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-coffee-800 dark:text-dark-700 mb-3 sm:mb-4">📖 Sobre o Projeto</h3>
+          <div class="text-coffee-700 dark:text-dark-600 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed">
+            <p>
+              Este é meu <strong>primeiro projeto full stack completo</strong>, desenvolvido como parte dos meus estudos para me capacitar melhor em desenvolvimento de aplicações full stack. O projeto foi uma jornada de aprendizado onde explorei desde captura de áudio em tempo real até interfaces web modernas.
+            </p>
+            
+            <p>
+              <strong>Desenvolvimento com IA como Assistente:</strong> Durante o desenvolvimento, utilizei IA como ferramenta de <strong>ajuda e orientação</strong> no processo de aprendizado. A IA serviu como um mentor experiente, me guiando através dos conceitos, ajudando a entender as tecnologias e explicando o "porquê" por trás de cada decisão técnica. Cada linha de código foi compreendida e implementada com propósito educacional.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Learning Objectives -->
+        <div>
+          <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-coffee-800 dark:text-dark-700 mb-3 sm:mb-4">🎯 Objetivos de Aprendizado Alcançados</h3>
+          <div class="grid sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
+            <div class="flex items-center gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600 text-sm sm:text-base">
+              <span class="text-green-500 text-lg sm:text-xl flex-shrink-0">✅</span>
+              <span>Integração Python + React em tempo real</span>
+            </div>
+            <div class="flex items-center gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600 text-sm sm:text-base">
+              <span class="text-green-500 text-lg sm:text-xl flex-shrink-0">✅</span>
+              <span>Processamento de áudio e análise de frequência</span>
+            </div>
+            <div class="flex items-center gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600 text-sm sm:text-base">
+              <span class="text-green-500 text-lg sm:text-xl flex-shrink-0">✅</span>
+              <span>WebSockets para comunicação bidirecional</span>
+            </div>
+            <div class="flex items-center gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600 text-sm sm:text-base">
+              <span class="text-green-500 text-lg sm:text-xl flex-shrink-0">✅</span>
+              <span>Interface moderna com TypeScript e TailwindCSS</span>
+            </div>
+            <div class="flex items-center gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600 text-sm sm:text-base">
+              <span class="text-green-500 text-lg sm:text-xl flex-shrink-0">✅</span>
+              <span>Estruturação e organização de projeto full stack</span>
+            </div>
+            <div class="flex items-center gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600 text-sm sm:text-base">
+              <span class="text-green-500 text-lg sm:text-xl flex-shrink-0">✅</span>
+              <span>Deploy e automação com scripts</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Features -->
+        <div>
+          <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-coffee-800 dark:text-dark-700 mb-3 sm:mb-4">✨ Funcionalidades</h3>
+          <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
+            <div class="flex items-start gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600">
+              <span class="text-lg sm:text-xl md:text-2xl flex-shrink-0">🎤</span>
+              <div class="text-sm sm:text-base">
+                <div class="font-semibold">Detecção de pitch em tempo real</div>
+                <div class="text-xs sm:text-sm opacity-80">Usando microfone do usuário</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600">
+              <span class="text-lg sm:text-xl md:text-2xl flex-shrink-0">🎼</span>
+              <div class="text-sm sm:text-base">
+                <div class="font-semibold">Conversão automática</div>
+                <div class="text-xs sm:text-sm opacity-80">Frequência para notas musicais</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600">
+              <span class="text-lg sm:text-xl md:text-2xl flex-shrink-0">📊</span>
+              <div class="text-sm sm:text-base">
+                <div class="font-semibold">Gráfico de pitch em tempo real</div>
+                <div class="text-xs sm:text-sm opacity-80">Com histórico visual</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600">
+              <span class="text-lg sm:text-xl md:text-2xl flex-shrink-0">🎯</span>
+              <div class="text-sm sm:text-base">
+                <div class="font-semibold">Seletor de nota alvo</div>
+                <div class="text-xs sm:text-sm opacity-80">Para treinamento de afinação</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600">
+              <span class="text-lg sm:text-xl md:text-2xl flex-shrink-0">📱</span>
+              <div class="text-sm sm:text-base">
+                <div class="font-semibold">Interface web moderna</div>
+                <div class="text-xs sm:text-sm opacity-80">Design responsivo e intuitivo</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600">
+              <span class="text-lg sm:text-xl md:text-2xl flex-shrink-0">🔄</span>
+              <div class="text-sm sm:text-base">
+                <div class="font-semibold">Conexão WebSocket</div>
+                <div class="text-xs sm:text-sm opacity-80">Dados em tempo real</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2 sm:gap-3 text-coffee-700 dark:text-dark-600">
+              <span class="text-lg sm:text-xl md:text-2xl flex-shrink-0">⚡</span>
+              <div class="text-sm sm:text-base">
+                <div class="font-semibold">Scripts automáticos</div>
+                <div class="text-xs sm:text-sm opacity-80">Iniciar/parar servidores</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Technologies -->
+        <div>
+          <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-coffee-800 dark:text-dark-700 mb-3 sm:mb-4">🛠️ Tecnologias Utilizadas</h3>
+          
+          <!-- Backend -->
+          <div class="mb-4 sm:mb-6">
+            <h4 class="text-base sm:text-lg md:text-xl font-semibold text-coffee-700 dark:text-dark-600 mb-2 sm:mb-3">Backend (Python)</h4>
+            <div class="grid sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
+              <div class="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-coffee-500 rounded-full flex-shrink-0"></span>
+                <span class="font-medium">FastAPI</span>
+              </div>
+              <div class="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-coffee-500 rounded-full flex-shrink-0"></span>
+                <span class="font-medium">WebSockets</span>
+              </div>
+              <div class="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-coffee-500 rounded-full flex-shrink-0"></span>
+                <span class="font-medium">NumPy</span>
+              </div>
+              <div class="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-coffee-500 rounded-full flex-shrink-0"></span>
+                <span class="font-medium">SoundDevice</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Frontend -->
+          <div>
+            <h4 class="text-base sm:text-lg md:text-xl font-semibold text-coffee-700 dark:text-dark-600 mb-2 sm:mb-3">Frontend (React)</h4>
+            <div class="grid sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
+              <div class="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-coffee-600 rounded-full flex-shrink-0"></span>
+                <span class="font-medium">React 18 + TypeScript</span>
+              </div>
+              <div class="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-coffee-600 rounded-full flex-shrink-0"></span>
+                <span class="font-medium">Vite</span>
+              </div>
+              <div class="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-coffee-600 rounded-full flex-shrink-0"></span>
+                <span class="font-medium">TailwindCSS</span>
+              </div>
+              <div class="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-coffee-600 rounded-full flex-shrink-0"></span>
+                <span class="font-medium">Recharts</span>
+              </div>
+              <div class="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="w-2 h-2 sm:w-3 sm:h-3 bg-coffee-600 rounded-full flex-shrink-0"></span>
+                <span class="font-medium">WebSocket Client</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal Actions -->
+    <div class="sticky bottom-0 bg-cream-50 dark:bg-dark-50 border-t border-coffee-200 dark:border-dark-200 p-4 sm:p-6 rounded-b-2xl sm:rounded-b-3xl">
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+        <button 
+          (click)="openLiveDemo()"
+          class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 sm:gap-3 bg-white text-coffee-600 border-2 border-coffee-500 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold hover:bg-coffee-500 hover:text-white transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base">
+          <span class="text-lg sm:text-xl">🚀</span>
+          <span>Ver Projeto ao Vivo</span>
+        </button>
+        
+        <button 
+          (click)="openGithub()"
+          class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 sm:gap-3 bg-white text-coffee-600 border-2 border-coffee-500 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold hover:bg-coffee-500 hover:text-white transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base">
+          <span class="text-lg sm:text-xl">🔗</span>
+          <span>Ver no GitHub</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
