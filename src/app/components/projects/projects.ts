@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './projects.html',
   styleUrl: './projects.css'
 })
-export class Projects implements OnInit {
+export class Projects implements OnInit, OnDestroy {
   showProjectModal = false;
 
   constructor(
@@ -21,18 +21,34 @@ export class Projects implements OnInit {
     this.route.fragment.subscribe(fragment => {
       if (fragment === 'pitch-detector') {
         this.showProjectModal = true;
+        this.disableBodyScroll();
       }
     });
   }
 
+  ngOnDestroy() {
+    // Garantir que o scroll seja restaurado se o componente for destruído
+    this.enableBodyScroll();
+  }
+
+  private disableBodyScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  private enableBodyScroll() {
+    document.body.style.overflow = '';
+  }
+
   openProjectModal() {
     this.showProjectModal = true;
+    this.disableBodyScroll();
     // Atualizar URL para compartilhamento
     this.router.navigate([], { fragment: 'pitch-detector' });
   }
 
   closeProjectModal() {
     this.showProjectModal = false;
+    this.enableBodyScroll();
     // Remover fragment da URL
     this.router.navigate([], { fragment: undefined });
   }
