@@ -37,25 +37,39 @@ export class Projects implements OnInit, OnDestroy {
   }
 
   private disableBodyScroll() {
+    // Impedir scroll no body e no html
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    
+    // Para mobile - adicionar position fixed para prevenir scroll
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
+    document.body.style.width = '100%';
   }
 
   private enableBodyScroll() {
+    // Restaurar estilos originais
+    const scrollY = document.body.style.top;
     document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    
+    // Restaurar posição do scroll
+    if (scrollY) {
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
   }
 
   openProjectModal() {
     this.showProjectModal = true;
     this.disableBodyScroll();
-    // Atualizar URL para compartilhamento
-    this.router.navigate([], { fragment: 'pitch-detector' });
   }
 
   closeProjectModal() {
     this.showProjectModal = false;
     this.enableBodyScroll();
-    // Remover fragment da URL
-    this.router.navigate([], { fragment: undefined });
   }
 
   openGithub() {
