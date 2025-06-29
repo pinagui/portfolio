@@ -4,7 +4,7 @@ module.exports = {
     "./src/**/*.{html,ts}",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: 'class',
+  darkMode: 'class', 
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [

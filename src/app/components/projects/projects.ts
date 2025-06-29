@@ -17,11 +17,16 @@ export class Projects implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    // Verificar se deve abrir o modal baseado na URL
+    // Verificar se deve rolar para a seção de projetos baseado na URL
     this.route.fragment.subscribe(fragment => {
       if (fragment === 'pitch-detector') {
-        this.showProjectModal = true;
-        this.disableBodyScroll();
+        // Rolar para a seção de projetos
+        setTimeout(() => {
+          const projectsSection = document.getElementById('projects');
+          if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
       }
     });
   }
